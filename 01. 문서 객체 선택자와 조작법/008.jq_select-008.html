@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-compatible" content="IE-edge ">
+    <meta name="viewport " content="width=divice-width,initial-scale=a.0">
+    <title>부모요소 선택자</title>
+    <script src="../js/jquery-3.6.0.min.js"></script>
+</head>
+    <body>
+    <!-- h1+ul#wrap>(li>ul>li*2)+li*2-->  
+    <h1>인접관계 선택자</h1>
+    <ul id="wrap">
+        <li>리스트1
+            <ul>
+                <li id="list_1">리스트 1-1</li>
+                <li>리스ㅌ 1-2</li>
+            </ul>
+        </li>
+        <li>리스트2</li>
+        <li>리스트3</li>
+    </ul>
+        <script>
+               $(function(){
+              //부모요소 선택자
+               //list_! 의 바로위 부모 선택됨 : ul
+               
+               $("h1.tit").css({
+                    "border":"1px solid red",
+                    "background-color": "#ff0"
+                });
+            });
+        </script>
+</body>
+</html> 
