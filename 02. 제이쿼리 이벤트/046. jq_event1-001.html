@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>단독 이벤트 등록/그룹 이벤트 등록</title>
+</head>
+<body>
+    <p><button class="btn1">버튼1</button></p>
+    <p>내용1</p>
+    <p><button class="btn2">버튼2</button></p>(
+    <p>내용2</p>
+    <script>
+        $(".btn1").click(function(){
+            $(".btn").parent().next().css({
+                "color":"red"
+            });
+        });
+
+        $(".btn2").on({
+
+            "mouseover focus" : function(){
+                $(".btn2").parent()
+            }
+        })
+
+    </script>
+</body>
+</html>

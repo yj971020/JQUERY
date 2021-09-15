@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ready()/load()메소드</title>
+    <title>단독 이벤트 등록/그룹 이벤트 등록</title>
     <script src="../js/jquery-3.6.0.min.js"></script>
 </head>
 <body>
@@ -17,7 +17,6 @@
     </p>
     <p>내용2</p>
     <script>
-        
     $(function() {            
         //단독 이벤트 등록
         //btn1 클릭 시 동작
@@ -45,11 +44,11 @@
             }
         });
 
-    //     //btn1 클릭 이벤트 제거
-    //     $(".btn1").off("click");
-    //     //btn2 mouseover, focus 이벤트 제거
-    //     $(".btn2").off("mouseover focus");
-     });
+        //btn1 강제 클릭 이벤트 발생
+        $(".btn1").click();
+        //btn2 강제 mouseover 이벤트 발생
+        $(".btn2").trigger("mouseover");
+    });
     </script>
 </body>
 </html>
